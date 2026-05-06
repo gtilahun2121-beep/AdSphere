@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": "1778092577171",
+      "name": "Jane Doe",
+      "email": "jane@example.com",
+      "role": "Advertiser"
+    },
+    {
+      "id": "1778102979605",
+      "name": "Getanew",
+      "email": "gtilahun2121@gmail.com",
+      "role": "Advertiser"
+    }
+  ],
+  "ads": [
+    {
+      "id": "1778092960223",
+      "title": "My Amazing SaaS",
+      "description": "A revolutionary tool for businesses.",
+      "category": "SaaS",
+      "price": 29,
+      "link": "https://example.com",
+      "imageUrl": "https://via.placeholder.com/400x250",
+      "status": "pending",
+      "createdAt": "2026-05-06T18:42:40.223Z"
+    },
+    {
+      "id": "1778093267074",
+      "title": "pc eregistration sysetem",
+      "description": "it best for........",
+      "category": "Mobile Apps",
+      "price": 0,
+      "link": "https://example.com",
+      "imageUrl": "https://via.placeholder.com/400x250",
+      "status": "pending",
+      "createdAt": "2026-05-06T18:47:47.074Z"
+    },
+    {
+      "id": "1778103254406",
+      "title": "pc registration",
+      "description": "it is the best system",
+      "category": "Websites",
+      "price": 0,
+      "link": " https://gtilahun2121-beep.github.io/campus-pc-monitoring/",
+      "imageUrl": "https://via.placeholder.com/400x250",
+      "status": "pending",
+      "createdAt": "2026-05-06T21:34:14.406Z"
+    }
+  ],
+  "categories": [
+    "Websites",
+    "Mobile Apps",
+    "Desktop Software",
+    "SaaS",
+    "Plugins"
+  ]
+}
