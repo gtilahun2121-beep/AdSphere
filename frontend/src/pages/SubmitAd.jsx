@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import API_BASE_URL from '../config';
 
 const SubmitAd = () => {
   const [step, setStep] = useState(1);
@@ -29,7 +30,7 @@ const SubmitAd = () => {
 
   const submitToBackend = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/ads', {
+      const res = await fetch(`${API_BASE_URL}/api/ads`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -51,7 +52,7 @@ const SubmitAd = () => {
     setLoading(true);
     // Mock payment API call
     try {
-      const res = await fetch('http://localhost:5000/api/payment', {
+      const res = await fetch(`${API_BASE_URL}/api/payment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: 29, method: 'card' })

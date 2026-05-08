@@ -132,6 +132,17 @@ app.post('/api/login', (req, res) => {
   res.json({ message: 'Login successful', token, user });
 });
 
+// --- Serve Frontend in Production ---
+const frontendDistPath = path.join(__dirname, '..', 'frontend', 'dist');
+if (fs.existsSync(frontendDistPath)) {
+  app.use(express.static(frontendDistPath));
+  // For any non-API route, serve the React app (SPA client-side routing)
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(frontendDistPath, 'index.html'));
+  });
+  console.log('Serving frontend from:', frontendDistPath);
+}
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

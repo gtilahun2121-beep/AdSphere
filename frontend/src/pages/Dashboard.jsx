@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import API_BASE_URL from '../config';
 
 const Dashboard = () => {
   const [ads, setAds] = useState([]);
@@ -16,7 +17,7 @@ const Dashboard = () => {
 
     const fetchMyAds = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/ads');
+        const res = await fetch(`${API_BASE_URL}/api/ads`);
         const data = await res.json();
         // In a real app, the backend would filter by user ID.
         // For mock purposes, we just show all pending or just simulate user's ads

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AdCard from '../components/AdCard';
+import API_BASE_URL from '../config';
 
 const Home = () => {
   const [ads, setAds] = useState([]);
@@ -12,8 +13,8 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const [adsRes, catRes] = await Promise.all([
-          fetch('http://localhost:5000/api/ads'),
-          fetch('http://localhost:5000/api/categories')
+          fetch(`${API_BASE_URL}/api/ads`),
+          fetch(`${API_BASE_URL}/api/categories`)
         ]);
         
         const adsData = await adsRes.json();
