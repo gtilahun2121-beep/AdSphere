@@ -6,6 +6,8 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import SubmitAd from './pages/SubmitAd';
 import Dashboard from './pages/Dashboard';
+import Explore from './pages/Explore';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -22,11 +24,12 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/explore" element={<div>Explore Page</div>} />
+            <Route path="/explore" element={<Explore />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/submit" element={<SubmitAd />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
 
